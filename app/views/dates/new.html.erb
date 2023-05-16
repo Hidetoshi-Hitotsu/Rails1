@@ -1,0 +1,39 @@
+<div class = "container container-new">
+    <div class ="pageTitle">
+        <h4 class = "pageTitleText">予定の新規追加</h4>
+    </div>
+
+    <div class = "container">
+    <div class = "FormContainer row">
+    <%= form_with model: @schedule , url: dates_path do |f| %>
+        <div class = "FormTitleWrapper col-12 mb">
+            <%= f.label :title, "タイトル" , class: 'Form FormTitle required'%>
+            <%= f.text_field :title , placeholder: "タイトル" %>
+        </div>
+        <div class = "FormDateWrapper row mb">
+            <div class = "FormDate1 col-6">
+                <%= f.label :start, "開始日" , class: 'Form FormStart required' %>
+                <%= f.date_field :start , min: Time.zone.now %>
+            </div>
+            <div class = "FormDate2 col-6">
+                <%= f.label :end_date, "終了日" , class: 'Form FormEnd required' %>
+                <%= f.date_field :end_date , min: Time.zone.now %>
+            </div>
+        </div>
+        <div class = "FormCheckWrapper col-12 mb">
+            <%= f.check_box :check ,{},checked_value = "○" , unchecked_value = nil %>
+            <%= f.label :check, "終日の場合はチェックを入れます" , class: 'Form FormCheck' %>
+        </div>
+        <div class = "FormMemoWrapper col-12 mb">
+            <%= f.label :memo, "スケジュールメモ" , class: 'Form FormMemo' %>
+            <%= f.text_area :memo , placeholder: "スケジュールメモ 500字以内"%>
+        </div>
+        <div class = "FormButtonWrapper">
+            <%= link_to "キャンセル" , dates_path, class: "btn btn-sm btn-light", method: :get %>
+            <%= f.submit "保存" , class: "btn btn-primary" %>
+        </div>
+    <% end %>
+    </div>
+    </div>
+    
+</div>

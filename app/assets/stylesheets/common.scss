@@ -1,0 +1,38 @@
+
+header{
+    padding: 2px 0;
+    background-color :#000080;
+    margin: 20px 0;
+}
+
+header h3{
+    color :white;
+    text-align: center;
+}
+
+table th {
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+table td {
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+
+.container{
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
