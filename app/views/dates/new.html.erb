@@ -3,6 +3,10 @@
         <h4 class = "pageTitleText">予定の新規追加</h4>
     </div>
 
+    <% if flash[:notice_error] %>
+        <p class = "notice-error"><%= flash[:notice_error] %> </p>
+    <% end %>
+
     <div class = "container">
     <div class = "FormContainer row">
     <%= form_with model: @schedule , url: dates_path do |f| %>
@@ -21,7 +25,7 @@
             </div>
         </div>
         <div class = "FormCheckWrapper col-12 mb">
-            <%= f.check_box :check ,{},checked_value = "○" , unchecked_value = nil %>
+            <%= f.check_box :check ,{},checked_value = "○" , unchecked_value = "" %>
             <%= f.label :check, "終日の場合はチェックを入れます" , class: 'Form FormCheck' %>
         </div>
         <div class = "FormMemoWrapper col-12 mb">

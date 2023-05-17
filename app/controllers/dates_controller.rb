@@ -13,6 +13,7 @@ class DatesController < ApplicationController
       flash[:notice]= "予定を新規登録しました"
       redirect_to :dates
     else
+      flash[:notice_error]="予定の新規登録に失敗しました"
       render "new"
     end
   end
