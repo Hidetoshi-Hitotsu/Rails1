@@ -1,0 +1,30 @@
+<div class = "container container-new mb">
+  <%= link_to "← 一覧に戻る", :dates %>
+</div>
+
+<div class = "container container-new">
+  <div class = "pageTitle mb">
+    <h3><%= @schedule.title %></h3>
+    <%= button_to "編集", {controller: "dates", action: "edit"}, {method: :get ,class: "btn btn-primary"} %>
+  </div>
+  <div class = "showTable">
+    <table class = "table table-bordered">
+      <tr>
+        <th>開始日</th>
+        <td><%= @schedule.start %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @schedule.end_date %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td><%= @schedule.check %></td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @schedule.memo %></td>
+      </tr>
+    </table>
+    </div>
+</div class = "container">

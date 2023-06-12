@@ -1,0 +1,96 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $gray-300;
+}
+
+.table{
+    background-color: white;
+}
+
+td{
+    height: 60px;
+    vertical-align: middle;
+}
+
+.navbar{
+    background-color: $blue-800;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.FormContainer{
+    background-color: white;
+    padding: 15px;
+}
+
+.container{
+    align-items: center;
+}
+.pageTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pageFooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-new{
+    max-width: 540px;
+}
+
+.mb{
+    margin-bottom: 24px;
+}
+
+.showTable{
+    padding: 12px;
+    background-color: white;
+}
+
+.required::after{
+    content: "*";
+    color: red;
+    margin-left: 3px;
+}
+
+.FormTitleWrapper{
+    display: flex;
+    flex-flow: column;
+}
+.FormMemoWrapper{
+    display: flex;
+    flex-flow: column;
+}
+
+.FormDate1,.FormDate2{
+    display: flex;
+    flex-flow: column;
+}
+
+.FormButtonWrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pageFooter{
+    padding: 20px;
+}
+
+.notice{
+    background-color: dodgerblue;
+    padding: 20px;
+    color: white;
+}
+
+.notice-error{
+    background-color: red;
+    padding: 20px;
+    color: white;
+}
